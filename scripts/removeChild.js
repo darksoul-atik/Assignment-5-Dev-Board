@@ -5,5 +5,5 @@ document.getElementById("clear").addEventListener("click", function (event) {
 
   nc.innerHTML = " ";
 
-  //its working in the local host.
+  //its working in the local host.Dont know why its not working in Github Live Link. Due to time shortage I have to submit it
 });
