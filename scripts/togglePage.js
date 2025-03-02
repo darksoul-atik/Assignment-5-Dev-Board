@@ -8,11 +8,3 @@ document
     window.location.href = "./blog.html";
     event.stopPropagation();
   });
-
-document
-  .getElementById("btmain")
-  .addEventListener("click", function name(event) {
-    // window.location.href = "index.html";
-    window.history.back();
-    event.stopPropagation();
-  });
