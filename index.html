@@ -40,7 +40,7 @@
 
                 <div class="flex justify-center items-center gap-4 bg-[#F4F7FF] py-3 px-5 rounded-3xl">
                     <input type="checkbox" checked="checked" class="checkbox checkbox-md !bg-[#3752FD] text-white" />
-                    <p class="font-bold text-2xl">23</p>
+                    <p class="font-bold text-2xl" id="taskDone">23</p>
                 </div>
 
                 <!-- !color picker div -->
@@ -79,7 +79,7 @@
                     <!-- task assigned Text Container -->
                     <div>
                         <p class="font-medium text-base text-[rgba(0,48,60,0.8)]">Task Assigned</p>
-                        <p class="font-bold text-2xl">05</p>
+                        <p class="font-bold text-2xl" id="taskNumber">5</p>
                     </div>
 
 
@@ -228,7 +228,7 @@
                         </div>
                         <!-- Button Div -->
                         <div>
-                            <button id="cb3"
+                            <button id="btn3"
                                 class="btn btn-primary border-none bg-[#3752FD] text-sm px-6">Completed</button>
                         </div>
 
@@ -352,7 +352,7 @@
 
         <!-- ||Activity Section|| -->
 
-        <section class="flex border-2 border-green-700  bg-white flex-col w-[20%] rounded-xl">
+        <section class="flex  bg-white flex-col w-[20%] rounded-xl">
 
             <!-- !!|activity log container| -->
             <div class="flex flex-col justify-center items-center  p-3 gap-4">
@@ -377,8 +377,8 @@
 
 
             <!-- Notification container -->
-            <div>
-                <p id="notification"></p>
+            <div id="notification_container">
+
             </div>
 
         </section>
@@ -394,7 +394,6 @@
 
     <!-- Script Area -->
     <script src="./scripts/utilities.js"></script>
-    <script src="./scripts/getTime.js"></script>
     <script src="./scripts/bodyColorChange.js"></script>
     <script src="./scripts/togglePage.js"></script>
     <script src="./scripts/addNotification.js"></script>

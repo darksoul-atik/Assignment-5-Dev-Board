@@ -8,8 +8,11 @@ document.getElementById("cb1").addEventListener("click", function (event) {
   let seconds = date.getSeconds();
   let shift;
 
-  if (minutes.length < 2) {
+  if (minutes < 10) {
     minutes = "0" + minutes;
+  }
+  if (seconds < 10) {
+    seconds = "0" + seconds;
   }
   if (hours >= 12) {
     shift = "pm";
@@ -34,9 +37,18 @@ document.getElementById("cb1").addEventListener("click", function (event) {
     "p-2"
   );
 
-  notificationContainer.innerHTML = `
-    <p class="text-center mb-4 bg-custom p-2 rounded-lg text-sm">You have completed the task ${title} at ${timeList}</p>
-  `;
+  const newP = document.createElement("p");
+  const text = "You have completed the task " + title + " at " + timeList;
+  newP.innerText = text;
+  newP.classList.add(
+    "text-center",
+    "mb-4",
+    "bg-custom",
+    "p-2",
+    "rounded-lg",
+    "text-sm"
+  );
+  notificationContainer.appendChild(newP);
 
   //button disable section
   const button = document.getElementById("cb1");
@@ -45,14 +57,17 @@ document.getElementById("cb1").addEventListener("click", function (event) {
 
   //task update section
   const taskNumber = document.getElementById("taskNumber").innerText;
-  const remain = taskNumber - 1;
-  document.getElementById("taskNumber").innerText = remain;
+
+  const taskNumberRemain = parseInt(taskNumber);
+  let remain = taskNumberRemain - 1;
+  document.getElementById("taskNumber").innerText = parseInt(remain);
 
   const taskDone = document.getElementById("taskDone").innerText;
-  const done = taskDone + 1;
-  document.getElementById("taskNumber").innerText = done;
+  const done = parseInt(taskDone) + 1;
+  document.getElementById("taskDone").innerText = done;
 
-  if (taskNumber === 0) {
-    alert("Congratulations you have completed all the task.");
+  if (remain === 0) {
+    alert("Congratulations you have completed all the tasks.");
   }
+  event.stopPropagation();
 });
