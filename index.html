@@ -11,7 +11,7 @@
 
 </head>
 
-<body class="bg-slate-100 h-[100vh] flex flex-col gap-4 ">
+<body class="bg-slate-100 h-[100vh]   flex flex-col gap-4 ">
 
     <header class="mt-6">
         <!-- !!!Nav Area-->
@@ -60,27 +60,87 @@
     <main class="max-w-screen-2xl w-full
      mx-auto  h-5/6 space-x-4 flex">
 
-
-
         <!-- ||main section|| -->
-        <section class="flex flex-col bg-white w-[80%] rounded-xl border-2 border-blue-700 p-4 ">
+        <section class="flex flex-col  bg-white w-[80%] rounded-xl py-3 px-4 ">
 
-            <!-- |dashboard div| -->
-            <div class="border-2 border-red-500 h-32">
+            <!-- |dashboard container| -->
+            <div class="h-26 flex justify-between gap-6 ">
+
+                <!-- !!Assigned Task Container -->
+
+                <div class="flex items-center gap-5 px-5 bg-custom rounded-lg w-1/5">
+
+                    <!-- !assigned tick container -->
+                    <div class="bg-white p-2 rounded-full">
+                        <input type="checkbox" checked="checked"
+                            class="checkbox checkbox-md !bg-[#3752FD] text-white" />
+                    </div>
+
+                    <!-- task assigned Text Container -->
+                    <div>
+                        <p class="font-medium text-base text-[rgba(0,48,60,0.8)]">Task Assigned</p>
+                        <p class="font-bold text-2xl">05</p>
+                    </div>
 
 
+
+
+
+                </div>
+
+                <!-- discover container -->
+                <div
+                    class=" bg-gradient-to-r from-[#3751fdd5] via-[rgba(108,127,250,0.53)] to-[rgba(166,175,235,0.34)] rounded-lg  w-3/5 flex justify-center gap-10 cursor-pointer  items-center">
+
+                    <!-- Image -->
+                    <div>
+                        <img class="w-14" src="./images/assets/board.png" alt="">
+                    </div>
+                    <!-- text -->
+                    <div>
+                        <p class="text-white text-lg font-medium hover:text-amber-100 ">Discover Something <br> New
+                            Today!</p>
+                    </div>
+
+
+
+                </div>
+
+
+
+                <!-- date container -->
+                <div class=" w-1/5 bg-custom rounded-lg flex  justify-around items-center px-5 ">
+
+                    <!-- logo section -->
+                    <div class="bg-white p-2 rounded-full">
+                        <img src="./images/assets/calender.png" alt="">
+                    </div>
+                    <!--dynamic date section -->
+
+                    <div class="flex flex-col gap-2">
+
+                        <!-- day name container -->
+                        <div>
+                            <p id="dayName" class="">WED ,</p>
+                        </div>
+                        <!-- date container -->
+                        <div>
+                            <p id="date" class="font-bold">25 July 2025</p>
+                        </div>
+                    </div>
+                </div>
 
 
             </div>
 
             <!-- hr line -->
-            <div class="flex max-w-screen-xl">
-                <hr class=" w-full border-t-2 border-dashed border-gray-200 my-8 mx-auto">
+            <div class="flex max-w-screen-xl my-4">
+                <hr class=" w-full border-t-2 border-dashed border-gray-200  mx-auto">
             </div>
 
 
             <!--|task div| -->
-            <div class=" gap-9 border-2 border-purple-800 h-full grid grid-cols-3">
+            <div class=" gap-7  h-full grid grid-cols-3">
 
 
                 <!-- card 1 -->
@@ -138,7 +198,7 @@
                         </div>
                         <!-- Button Div -->
                         <div>
-                            <button id="completedButton"
+                            <button disabled id="completedButton"
                                 class="btn btn-primary border-none bg-[#3752FD] text-sm px-6">Completed</button>
                         </div>
 
@@ -295,7 +355,30 @@
         <!-- ||Activity Section|| -->
 
         <section class="flex border-2 border-green-700  bg-white flex-col w-[20%] rounded-xl">
-            <!-- |activity div| -->
+
+            <!-- !!|activity log container| -->
+            <div class="flex flex-col justify-center items-center  p-3 gap-4">
+                <!--  !text and logo container  -->
+                <div class="flex gap-4">
+                    <!-- Logo -->
+                    <div>
+                        <img src="./images/assets/activity.png" alt="">
+                    </div>
+                    <!-- Text -->
+                    <div>
+                        <p class="font-medium text-lg text-[#00303C]">Activity Log</p>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary border-none bg-[#3752FD] text-sm px-6">Clear History</button>
+            </div>
+            <!-- hr line -->
+            <div class="flex max-w-screen-xl my-5">
+                <hr class=" w-full border-t-2 border-dashed border-gray-200  mx-auto">
+            </div>
+
+
+            <!-- Notification container -->
             <div>
 
             </div>
