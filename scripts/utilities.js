@@ -13,3 +13,10 @@ function getInnerTextByID(id) {
 function setInnerTextByIDandValue(id, value) {
   document.getElementById(id).innerText = value;
 }
+
+function togglePageByIDandHref(id, location) {
+  document.getElementById(id).addEventListener("click", function (event) {
+    event.preventDefault();
+    window.location.href = location;
+  });
+}

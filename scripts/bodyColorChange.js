@@ -7,7 +7,7 @@ document
     randomColor = randomColor.slice(2, 8);
 
     if (randomColor.length < 6) {
-      while (randomColor.length < 6) {
+      while (randomColor.length !== 6) {
         randomColor = randomColor + "0";
       }
     }

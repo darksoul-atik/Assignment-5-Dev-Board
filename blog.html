@@ -11,7 +11,7 @@
 
 </head>
 
-<body class="bg-slate-100 h-[100vh]   flex flex-col gap-4 ">
+<body class="bg-slate-100 h-[100vh] flex flex-col gap-4 ">
 
     <header class="mt-6">
         <!-- !!!Nav Area-->
@@ -35,9 +35,11 @@
 
             <!-- Back to Main section -->
             <section class="flex justify-center items-center gap-8 ">
-
                 <div>
-                    <button class="btn btn-primary border-none bg-[#3752FD] text-sm px-6">Back to Main</button>
+
+                    <button id="btmain"
+                        class="btn btn-primary cursor-pointer text-white border-none bg-[#3752FD] text-sm px-6">
+                        Back to Main </button>
                 </div>
             </section>
 
@@ -48,8 +50,6 @@
         </div>
 
     </header>
-
-
 
 
     <main class="flex justify-center flex-col shadow-sm max-w-screen-2xl w-full mx-auto">
@@ -108,9 +108,9 @@
 
 
 
-
-
-
+    <!-- Scripts Section -->
+    <script src="./scripts/utilities.js"></script>
+    <script src="./scripts/togglePage2.js"></script>
 </body>
 
 </html>
